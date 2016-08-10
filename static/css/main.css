@@ -1,0 +1,265 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+h3 {
+    color: #F71151;
+}
+.la-republica{
+  background-color: #F0104E;
+  height: 48px;
+}
+  .v-center{
+  display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#testimonios{
+    color: #fff;
+}
+.fondo {
+    background: url(../images/fondo.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.resalt {
+    background-color: #F71151;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: absolute;
+    width: 10%;
+    height: 32px;
+    margin: auto;
+    left: 45%;
+    z-index: 1;
+}
+
+.img-foto-1{
+  background: url(../images/kristel.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img-foto-2{
+  background: url(../images/analia.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img-foto-3{
+  background: url(../images/victoria.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img-foto-4{
+  background: url(../images/yovana.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img-foto-5{
+  background: url(../images/jemmy.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.img-foto-6{
+  background: url(../images/adriana.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hashtag {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    font-family: oswald;
+}
+
+.intro {
+    font-size: 2.8rem;
+    margin-top: 3%; 
+}
+
+#myCarousel {
+    display: none; 
+}
+
+.img-w {
+    width: 96%;
+}
+/*videos*/
+.foto {
+    margin: 3% 0 0;
+    padding: 8px;
+}
+.fa{
+    color: #fff;
+}
+
+/*modal*/
+.fade.in {
+    background: rgba(0, 0, 0, 0.8);
+}
+.modal-dialog {
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 65%;
+    margin-top: 5%;
+    color: #fff;
+}
+.modal-content {
+    background: transparent;
+}
+.modal-header{
+    border-bottom: none;
+}
+.img-agresor{
+   width: 50%;
+}
+
+.close {
+    border: 2px #fff;
+    color: #F71151;
+    font-size: 4rem;
+    opacity: 5;
+}
+.close:hover {
+    color: #F71151;
+}
+
+.img-foto {
+  height: 325px;
+}
+
+.mb-50{
+  margin-bottom:50px;
+}
+/*media*/
+
+@media only screen and (max-width: 1200px) {
+    .img-agresor{
+    width: 100%;
+    }
+
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .img-agresor{
+    width: 50%;
+    }
+    .container{
+        width: 750px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .logo {
+    width: 100%;
+    margin: auto;
+    }
+     #myCarousel {
+    display: block; 
+     }
+    .modal-dialog {
+    width: 100%;
+    }
+    .img-agresor{
+    width: 50%;
+    }
+    .addthis{
+    position: relative;
+      left: 14px;
+    }
+    .img-foto-1, .img-foto-2, .img-foto-3, .img-foto-4, .img-foto-5, .img-foto-6{
+          width:165px; 
+          height:299px;
+    }
+}
+
+@media (max-width: 767px) {
+    .intro {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3%; 
+    }
+}
+
+/*geny*/
+body {
+  overflow-x: hidden;
+  font-family: "Bitter";
+}
+
+.cifras {
+  color: #333333;
+  font-weight: 700;
+  font-size: 6rem;
+  padding-top: 21px;
+  padding-bottom: 0px;
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
+#legend {
+  position: absolute;
+  bottom: 0;
+  left: -21px;
+  max-width: 220px;
+}
+@media screen and (max-width: 767px) {
+  .cifras {
+    font-size: 4rem;
+  }
+}
+.lead {
+  color: #F0104E;
+}
+
+@media screen and (max-width: 767px) {
+  #legend {
+    left: -63px;
+    max-width: 180px;
+  }
+  #legend tbody {
+    font-size: 1rem;
+  }
+  .est-2 {
+    margin-bottom: 72px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #legend {
+    left: -14px;
+  }
+  #legend tbody {
+    font-size: 1rem;
+  }
+  #legend th {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .container {
+    width: 75%;
+  }
+}
