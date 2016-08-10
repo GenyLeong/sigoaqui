@@ -28,14 +28,11 @@ h3 {
 
 .resalt {
     background-color: #F71151;
-    margin-left: 1%;
-    margin-right: 1%;
     position: absolute;
     width: 10%;
     height: 32px;
     margin: auto;
     left: 45%;
-    z-index: 1;
 }
 
 .img-foto-1{
@@ -145,7 +142,9 @@ h3 {
 .close:hover {
     color: #F71151;
 }
-
+.testimonio{
+  font-size:18px;
+}
 .img-foto {
   height: 325px;
 }
@@ -192,9 +191,6 @@ h3 {
           width:165px; 
           height:299px;
     }
-}
-
-@media (max-width: 767px) {
     .intro {
     font-size: 2rem;
     text-align: center;
@@ -262,4 +258,8 @@ body {
   .container {
     width: 75%;
   }
+  h4{
+    font-size:35px;
+  }
 }
+
