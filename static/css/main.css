@@ -9,10 +9,14 @@ h3 {
   height: 48px;
 }
   .v-center{
+  display: -ms-flexbox;
   display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
 }
 
 #testimonios{
@@ -20,9 +24,6 @@ h3 {
 }
 .fondo {
     background: url(../images/fondo.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -37,49 +38,31 @@ h3 {
 
 .img-foto-1{
   background: url(../images/kristel.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .img-foto-2{
   background: url(../images/analia.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .img-foto-3{
   background: url(../images/victoria.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .img-foto-4{
   background: url(../images/yovana.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .img-foto-5{
   background: url(../images/jemmy.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
 .img-foto-6{
   background: url(../images/adriana.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -91,8 +74,9 @@ h3 {
 }
 
 .intro {
-    font-size: 2.8rem;
-    margin-top: 3%; 
+   font-size: 3rem;
+    margin-top: 3%;
+    padding: 0 49px;
 }
 
 #myCarousel {
@@ -129,9 +113,6 @@ h3 {
 .modal-header{
     border-bottom: none;
 }
-.img-agresor{
-   width: 50%;
-}
 
 .close {
     border: 2px #fff;
@@ -153,20 +134,8 @@ h3 {
   margin-bottom:50px;
 }
 /*media*/
-
-@media only screen and (max-width: 1200px) {
-    .img-agresor{
-    width: 100%;
-    }
-
-}
-@media (min-width: 992px) and (max-width: 1200px){
-    .img-agresor{
-    width: 50%;
-    }
-    .container{
-        width: 750px;
-    }
+.img-agresor{
+    width: 90%;
 }
 
 @media only screen and (max-width: 767px) {
@@ -193,8 +162,7 @@ h3 {
     }
     .intro {
     font-size: 2rem;
-    text-align: center;
-    margin-top: 3%; 
+    margin-top: 3%;
     }
 }
 
@@ -258,7 +226,7 @@ body {
   .container {
     width: 75%;
   }
-  h4{
+  .modal-title{
     font-size:35px;
   }
 }
