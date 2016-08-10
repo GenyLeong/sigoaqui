@@ -12,8 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function() {
     return gulp.src("static/css/*.css")  // nombre del proceso
-        .pipe(autoprefixer('last 2 version'))
-        .pipe(concat('index.css'))         // versiones de navegadores que soportar
+        .pipe(autoprefixer('last 2 version'))// versiones de navegadores que soportar
         .pipe(gulp.dest('dist/css/'))   // ruta destino de los archivos procesados
         .pipe(rename({suffix: '.min'}))     // agregamos el prefijo min para los archivos minimizados
         .pipe(minifycss())  // minimizamos el css

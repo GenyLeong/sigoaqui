@@ -78,9 +78,19 @@ h3 {
     margin-top: 3%;
     padding: 0 49px;
 }
+.translate_button{
+      -webkit-transform: translate(3%, 177%);
+       -moz-transform: translate(3%, 177%);
+        -ms-transform: translate(3%, 177%);
+         -o-transform: translate(3%, 177%);
+            transform: translate(3%, 177%);
+}
 
 #myCarousel {
     display: none; 
+}
+.img-carousel{
+  margin: auto;
 }
 
 .img-w {
