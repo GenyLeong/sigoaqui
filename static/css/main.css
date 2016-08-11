@@ -28,7 +28,7 @@ h3 {
 }
 .fb{
   position: relative;
-    bottom: 10px;
+    bottom: 7px;
 }
 
 .resalt {
@@ -44,27 +44,22 @@ h3 {
   background: url(../images/kristel.jpg) no-repeat;
     background-size: cover;
 }
-
 .img-foto-2{
-  background: url(../images/analia.jpg) no-repeat;
-    background-size: cover;
-}
-
-.img-foto-3{
   background: url(../images/victoria.jpg) no-repeat;
     background-size: cover;
 }
-
+.img-foto-3{
+  background: url(../images/analia.jpg) no-repeat;
+    background-size: cover;
+}
 .img-foto-4{
   background: url(../images/yovana.jpg) no-repeat;
     background-size: cover;
 }
-
 .img-foto-5{
   background: url(../images/jemmy.jpg) no-repeat;
     background-size: cover;
 }
-
 .img-foto-6{
   background: url(../images/adriana.jpg) no-repeat;
     background-size: cover;
@@ -146,6 +141,9 @@ h3 {
 
 .mb-50{
   margin-bottom:50px;
+}
+.mt-48{
+  margin-top: 48px;
 }
 /*media*/
 .img-agresor{
