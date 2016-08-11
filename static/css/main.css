@@ -26,6 +26,10 @@ h3 {
     background: url(../images/fondo.jpg) no-repeat;
     background-size: cover;
 }
+.fb{
+  position: relative;
+    bottom: 10px;
+}
 
 .resalt {
     background-color: #F71151;
@@ -222,7 +226,7 @@ body {
 
 @media screen and (max-width: 410px) {
   #legend {
-    left: -14px;
+   left: -21px;
   }
   #legend tbody {
     font-size: 1rem;
