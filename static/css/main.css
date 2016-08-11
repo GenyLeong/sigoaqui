@@ -31,13 +31,8 @@ h3 {
     bottom: 7px;
 }
 
-.resalt {
-    background-color: #F71151;
-    position: absolute;
-    width: 10%;
-    height: 32px;
-    margin: auto;
-    left: 45%;
+#hashtag span{
+background-color: #F71151;
 }
 
 .img-foto-1{
