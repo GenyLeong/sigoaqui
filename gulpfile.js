@@ -15,7 +15,7 @@ gulp.task('styles', function() {
         .pipe(autoprefixer('last 2 version'))// versiones de navegadores que soportar
         .pipe(gulp.dest('dist/css/'))   // ruta destino de los archivos procesados
         .pipe(rename({suffix: '.min'}))     // agregamos el prefijo min para los archivos minimizados
-        .pipe(minifycss())  // minimizamos el css
+        .pipe(minifycss({processImport: false}))  // minimizamos el css
         .pipe(gulp.dest('dist/css'))  // ruta destino del archivo minimizado
         .pipe(notify({ message: 'Styles task complete' }));  // avisamos al sistema que el proceso se completó.
 }); 
