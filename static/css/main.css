@@ -195,6 +195,36 @@ body {
   left: -21px;
   max-width: 220px;
 }
+.logo-footer img{
+    width: 200px;
+    height: 48px;
+    padding-left: 32px;
+}
+.box-creditos{
+    padding: 21px 0;
+    margin-bottom: 48px;
+}
+.box-creditos h4{
+color: #CF0329;
+}
+
+.creditos a, a:active, a:hover, a:visited, a:focus{
+  text-decoration:none;
+  color: #777;
+}
+.separador{
+  color: #E7E7E7;
+    height: 1px;
+    width: 100%;
+}
+
+ul{
+  list-style-type:none;
+}
+#cuadro{
+  margin: 35px 0 49px 0;
+}
+
 @media screen and (max-width: 767px) {
   .cifras {
     font-size: 4rem;
