@@ -1,0 +1,239 @@
+@import "../helpers/mixins.scss";
+
+.fb {
+  position: relative;
+  bottom: 7px;
+}
+.hashtag {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  font-family: $font_oswald;
+}
+h3 {
+  color: $magenta;
+}
+
+#testimonios, .fa {
+  color: $white;
+}
+
+.la-republica {
+  background-color: $magenta;
+  height: 48px;
+}
+
+.fondo {
+  background: $url_2 no-repeat;
+  background-size: cover;
+}
+
+.img-foto-1 {
+  background: $url_3 no-repeat;
+  background-size: cover;
+}
+.img-foto-2 {
+  background: $url_4 no-repeat;
+  background-size: cover;
+}
+.img-foto-3 {
+  background: $url_5 no-repeat;
+  background-size: cover;
+}
+.img-foto-4 {
+  background: $url_6 no-repeat;
+  background-size: cover;
+}
+.img-foto-5 {
+  background: $url_7 no-repeat;
+  background-size: cover;
+}
+.img-foto-6 {
+  background: $url_8 no-repeat;
+  background-size: cover;
+}
+.intro {
+  font-size: 3rem;
+  margin-top: 3%;
+  padding: 0 49px;
+}
+.translate_button {
+  //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: translate(3%,177%);
+}
+
+#myCarousel {
+  display: none;
+}
+.img-carousel {
+  margin: auto;
+}
+.img-w {
+  width: 96%;
+}
+.foto {
+  margin: 3% 0 0;
+  padding: 8px;
+}
+.modal-dialog {
+  margin: 5% auto 0;
+  width: 65%;
+  color: $white;
+}
+.close {
+  color: $magenta;
+  border: 2px $white;
+  font-size: 4rem;
+  opacity: 5;
+  &:hover {
+    color: $magenta;
+  }
+}
+.modal-content {
+  background: 0 0;
+}
+.modal-header {
+  border-bottom: none;
+}
+.testimonio {
+  font-size: 18px;
+}
+.img-foto {
+  height: 325px;
+}
+
+.img-agresor {
+  width: 90%;
+}
+@media only screen and(max-width:767px) {
+  .logo {
+    width: 100%;
+    margin: auto;
+  }
+  .modal-dialog {
+    width: 100%;
+  }
+  #myCarousel {
+    display: block;
+  }
+  .img-agresor {
+    width: 50%;
+  }
+  .addthis {
+    position: relative;
+    left: 14px;
+  }
+  .img-foto-1, .img-foto-2, .img-foto-3,  .img-foto-4, .img-foto-5, .img-foto-6{
+    width: 165px;
+    height: 299px;
+  }
+
+  .intro {
+    font-size: 2rem;
+    margin-top: 3%;
+  }
+}
+body {
+  overflow-x: hidden;
+  font-family: $font_bitter;
+}
+.cifras {
+  color: $very_dark_gray;
+  font-weight: 700;
+  font-size: 6rem;
+  padding: 21px 7px 0;
+}
+#legend {
+  position: absolute;
+  bottom: 0;
+  left: -21px;
+  max-width: 220px;
+}
+.box-creditos {
+  padding: 21px 0;
+  margin-bottom: 48px;
+  h4 {
+    color: $strong_red;
+  }
+}
+a {
+  &:active {
+    text-decoration: none;
+    color: $dark_gray;
+  }
+  &:focus {
+    text-decoration: none;
+    color: $dark_gray;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $dark_gray;
+  }
+  &:visited {
+    text-decoration: none;
+    color: $dark_gray;
+  }
+}
+.separador {
+  color: $very_light_gray;
+  height: 1px;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+#cuadro {
+  margin: 35px 0 49px;
+}
+.lead {
+  color: $magenta;
+}
+@media screen and(max-width:767px) {
+  .cifras {
+    font-size: 4rem;
+  }
+  #legend {
+    left: -63px;
+    max-width: 180px;
+    tbody {
+      font-size: 1rem;
+    }
+  }
+  .est-2 {
+    margin-bottom: 72px;
+  }
+}
+@media screen and(max-width:410px) {
+  #legend {
+    left: -21px;
+    tbody {
+      font-size: 1rem;
+    }
+    th {
+      font-size: .8rem;
+    }
+  }
+}
+@media screen and(min-width:1300px) {
+  .container {
+    width: 75%;
+  }
+  .modal-title {
+    font-size: 35px;
+  }
+}
+#hashtag span {
+  background-color: $magenta;
+}
+.fade.in {
+  background: $black_80;
+}
+.logo-footer img {
+  width: 200px;
+  height: 48px;
+  padding-left: 32px;
+}
+.creditos a {
+  text-decoration: none;
+  color: $dark_gray;
+}

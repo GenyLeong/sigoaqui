@@ -7,18 +7,25 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
+    concatCss = require('gulp-concat-css'),
     notify = require('gulp-notify'),
-    del = require('del');
+    del = require('del'),
+    sass = require('gulp-sass'),
+    watch = require('gulp-watch'),
+    livereload = require('gulp-livereload'),
+    browserSync = require('browser-sync'),
+    fs = require('fs-extra');
 
-gulp.task('styles', function() {
-    return gulp.src("static/css/*.css")  // nombre del proceso
-        .pipe(autoprefixer('last 2 version'))// versiones de navegadores que soportar
-        .pipe(gulp.dest('dist/css/'))   // ruta destino de los archivos procesados
-        .pipe(rename({suffix: '.min'}))     // agregamos el prefijo min para los archivos minimizados
-        .pipe(minifycss({processImport: false}))  // minimizamos el css
-        .pipe(gulp.dest('dist/css'))  // ruta destino del archivo minimizado
-        .pipe(notify({ message: 'Styles task complete' }));  // avisamos al sistema que el proceso se completó.
-}); 
+gulp.task('styles', ['cleanCSS'], function () {
+  gulp.src('./static/sass/main.scss')//lee estos archivos
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(minifycss({keepBreaks:false}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(notify({ message: 'CSS - task completed'}))
+});
 
 gulp.task("jshint", function(){
     return gulp.src(['/static/js/*.js']) // pasamos nuestros propios archivos js
@@ -27,23 +34,40 @@ gulp.task("jshint", function(){
         .pipe(notify({ message: 'JSHints task complete' })); // notifcamos al sistema
 });
 
-gulp.task('scripts', function() {
-  return gulp.src(['static/js/*.js']) // trabajaremos con el archivo de jquery y nuestros js 
-    .pipe(concat('index.js')) // los concatenamos en el archivo main.js
-    .pipe(gulp.dest('static/js')) // guardamos el archivo concatenado
-    .pipe(rename({suffix: '.min'})) // hacemos unacopia y le agregamos el prefijo min
-    .pipe(uglify()) // lo minimizamos
-    .pipe(gulp.dest('dist/')) // lo guardamos
+gulp.task('scripts', ['cleanJS'], function() {
+  gulp.src('./static/js/index.js')
+    .pipe(gulp.dest('./dist/js')) // trabajaremos con el archivo de jquery y nuestros js 
+    .pipe(uglify().on('error', function(e){
+            console.log(e);
+         }))
+    .pipe(rename({suffix: '.min'})) // hacemos una copia y le agregamos el prefijo min
+    .pipe(gulp.dest('./dist/js'))
     .pipe(notify({ message: 'Scripts task complete' })); // avisamos al sistema que la tarea se completó
 }); 
 
 gulp.task('images', function() {
   return gulp.src('static/images/*') // ruta a nuestras imágenes, queremos que busque a dos niveles
     .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })) // proceso de optimización
-    .pipe(gulp.dest('dist/')) // guardamos las imágenes procesadas
+    .pipe(gulp.dest('dist/images')) // guardamos las imágenes procesadas
     .pipe(notify({ message: 'Images task complete' })); // avisamos al sistema
 });
 
-gulp.task('default', function() {
+gulp.task('watch', function() {
+  gulp.watch('./static/sass/**/*.scss', ['styles']);
+});
+
+gulp.task('cleanCSS', function() {
+  fs.removeSync('./dist/css');
+});
+
+gulp.task('cleanJS', function() {
+  fs.removeSync('./dist/js');
+});
+
+gulp.task('clean', function(cb) {
+    del(['./dist/css', './dist/js', './dist/images'], cb)
+});
+
+gulp.task('default', ['clean'] ,function() {
     gulp.start('styles', 'scripts', 'images');
 });
