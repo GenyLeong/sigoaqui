@@ -188,14 +188,20 @@ ul {
 .lead {
   color: $magenta;
 }
+
 .anexo-title{
-  h3{
-    background-color: #DD3A28;
-    margin: 0px;
-    color: white;
-    padding: 1rem;
-  }
+    h2{
+      transform: translate(10%);
+      margin-bottom: 3rem;
+    }
+    h3{
+      background-color: #DD3A28;
+      margin: 0px;
+      color: white;
+      padding: 1rem;
+    }
 }
+
 .anexo{
   background-color: #262022;
   padding: 2rem 4rem 3rem;
@@ -254,6 +260,12 @@ ul {
   }
   } 
 
+  .anexo-title{
+    h2{
+      transform: translate(5%);
+    }
+
+}
 }
 
 @media screen and(max-width:410px) {

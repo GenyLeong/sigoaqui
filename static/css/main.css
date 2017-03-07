@@ -6137,6 +6137,11 @@ ul {
 .lead {
   color: #f71151; }
 
+.anexo-title h2 {
+  -webkit-transform: translate(10%);
+          transform: translate(10%);
+  margin-bottom: 3rem; }
+
 .anexo-title h3 {
   background-color: #DD3A28;
   margin: 0px;
@@ -6184,7 +6189,10 @@ ul {
       margin: auto; }
       .anexo .anexo-mapa iframe {
         width: 100%;
-        height: 380px; } }
+        height: 380px; }
+  .anexo-title h2 {
+    -webkit-transform: translate(5%);
+            transform: translate(5%); } }
 
 @media screen and (max-width: 410px) {
   #legend {
