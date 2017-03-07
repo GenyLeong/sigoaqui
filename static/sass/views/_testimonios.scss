@@ -188,6 +188,43 @@ ul {
 .lead {
   color: $magenta;
 }
+.anexo-title{
+  h3{
+    background-color: #DD3A28;
+    margin: 0px;
+    color: white;
+    padding: 1rem;
+  }
+}
+.anexo{
+  background-color: #262022;
+  padding: 2rem 4rem 3rem;
+  margin: auto;
+  h3{
+    color: #dd3a28;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+  p{
+    color:$white;
+    font-size: 1.6rem;
+  }
+  img{
+    width: 30rem;
+    margin: 35px auto;
+    display: block;
+  }
+  .anexo-mapa{
+    width: 100%;
+    margin: auto;
+    iframe{
+      width:100%;
+      height:680px;
+    }
+  }
+}
+
 @media screen and(max-width:767px) {
   .cifras {
     font-size: 4rem;
@@ -202,7 +239,23 @@ ul {
   .est-2 {
     margin-bottom: 72px;
   }
+  .anexo {
+    padding: 1rem 1rem 3rem;    
+    h3 {
+      padding-left: 0px;
+    }
+    .anexo-mapa{
+    width: 100%;
+    margin: auto;
+    iframe{
+      width:100%;
+      height:380px;
+    }
+  }
+  } 
+
 }
+
 @media screen and(max-width:410px) {
   #legend {
     left: -21px;
@@ -222,6 +275,7 @@ ul {
     font-size: 35px;
   }
 }
+
 #hashtag span {
   background-color: $magenta;
 }
@@ -229,8 +283,7 @@ ul {
   background: $black_80;
 }
 .logo-footer img {
-  width: 200px;
-  height: 48px;
+  width: 250px;
   padding-left: 32px;
 }
 .creditos a {
